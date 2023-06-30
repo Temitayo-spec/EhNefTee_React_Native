@@ -1,5 +1,5 @@
-import { View, Text, Image } from 'react-native';
-import { useNavigation, useRouter } from 'expo-router';
+import { View, Image } from 'react-native';
+import { useRouter } from 'expo-router';
 
 import { COLORS, SIZES, SHADOWS, assets } from '../../constants';
 import { CircleButton, RectButton } from './Button';
