@@ -14,10 +14,10 @@ import { Buttons } from '../../components';
 
 const NFTDetails = () => {
   const { NFTTile, SubInfo, ETHPrice } = HomeComponents;
+  const { RectButton, CircleButton } = Buttons;
   return (
     <View>
       <Text>NFTDetails</Text>
-      
     </View>
   );
 };
