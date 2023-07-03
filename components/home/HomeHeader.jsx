@@ -28,7 +28,6 @@ const HomeHeader = () => {
           style={{
             color: COLORS.white,
             fontSize: SIZES.large,
-            fontWeight: FONTS.bold,
             marginTop: SIZES.base / 2,
           }}
         >
