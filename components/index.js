@@ -9,3 +9,5 @@ export const Buttons = { CircleButton, RectButton };
 export { default as HomeHeader } from './home/HomeHeader';
 import { SubInfo, ETHPrice, NFTTile, EndDate } from './home/SubInfo';
 export const HomeComponents = { SubInfo, ETHPrice, NFTTile, EndDate };
+export { default as DetailsBid } from './details/DetailsBid';
+export { default as DetailsDesc } from './details/DetailsDesc';
