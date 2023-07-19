@@ -1,7 +1,7 @@
 import { View, Text, Image, TextInput } from 'react-native';
-import { COLORS, FONTS, SIZES, assets } from '../../constants';
+import { COLORS, SIZES, assets } from '../../constants';
 
-const HomeHeader = () => {
+const HomeHeader = ({ handleSearch }) => {
   return (
     <View
       style={{
@@ -57,7 +57,7 @@ const HomeHeader = () => {
           <TextInput
             placeholder="Search NFTs"
             style={{ flex: 1 }}
-            onChangeText={(text) => console.log(text)}
+            onChangeText={(text) => handleSearch(text)}
           />
         </View>
       </View>

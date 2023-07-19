@@ -14,6 +14,13 @@ import { COLORS, NFTData, FONTS, SIZES, assets } from '../constants';
 const Home = () => {
   const router = useRouter();
 
+  const [nftData, setNftData] = useState(NFTData);
+
+  const handleSearch = (text) => {
+    const formattedQuery = text.toLowerCase();
+    const filteredData = NFTData.filter((item) => item.name.toLowerCase().includes(formattedQuery));
+    setNftData(filteredData);
+  };
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Stack.Screen
@@ -65,12 +72,12 @@ const Home = () => {
       />
       <FocusedStatusBar background={COLORS.primary} />
 
-      <HomeHeader />
+      <HomeHeader handleSearch={handleSearch} />
 
-      <View style={{ flex: 1}}>
+      <View style={{ flex: 1 }}>
         <View style={{ zIndex: 0 }}>
           <FlatList
-            data={NFTData}
+            data={nftData}
             renderItem={({ item }) => (
               <NFTCard {...item} onPress={() => router.push('NFT', { item })} />
             )}
